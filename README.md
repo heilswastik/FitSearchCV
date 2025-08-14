@@ -9,6 +9,20 @@ It provides a single function:
 
 ---
 
+
+
+## Best Use cases
+
+-Accuracy, Balanced Accuracy
+
+-Precision, Recall, F1, Jaccard similarity
+
+-ROC AUC, PR AUC
+
+-Matthews correlation coefficient (MCC, normalized variant)
+
+---
+
 ## Why?
 
 Vanilla `GridSearchCV` usually selects the highest mean test score, which can sometimes favor models with high variance.  
@@ -26,7 +40,7 @@ PyPI link: [PyPI](https://pypi.org/project/fitsearchcv/)
 
 ---
 
-## How to Use
+## How to Use?
 
 <pre>from fitsearchcv.selectors import selector_mean
 from sklearn.model_selection import GridSearchCV
