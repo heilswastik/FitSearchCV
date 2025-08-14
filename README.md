@@ -1,4 +1,4 @@
-# FitSearchCV— A smarter `refit` selector for scikit-learn searches
+# **FitSearchCV**— A smarter `refit` selector for scikit-learn searches
 
 `selector-mean` is a tiny utility that helps reduce **overfitting** and **underfitting** when tuning hyperparameters with scikit-learn’s `GridSearchCV` or `RandomizedSearchCV`.
 
