@@ -15,4 +15,38 @@ Vanilla `GridSearchCV` usually selects the highest mean test score, which can so
 `selector_mean` instead minimizes: `0.5 * (|train - test|) + 0.5 * (1 - test)`  
 This prevents both underfittnig and overfitting.
 
+---
 
+## Want to try? 
+
+Just type  
+<pre>pip install fitsearhcv</pre>
+
+PyPI link: [PyPI](https://pypi.org/project/fitsearchcv/)
+
+---
+
+## How to Use
+
+<pre>from fitsearchcv.selectors import selector_mean
+from sklearn.model_selection import GridSearchCV
+from sklearn.linear_model import LogisticRegression
+
+lr=LogisticRegression()
+
+param_grid = [
+    {'penalty': ['l1'], 'C': [0.1, 1, 10], 'solver': ['liblinear', 'saga']},
+    
+    {'penalty': ['l2'], 'C': [0.1, 1, 10], 'solver': ['liblinear', 'lbfgs', 'saga', 'sag', 'newton-cg']},
+    
+    {'penalty': ['elasticnet'], 'C': [0.1, 1, 10], 'solver': ['saga'], 'l1_ratio': [0.0, 0.25, 0.5, 0.75, 1.0]},
+    
+    {'penalty': [None], 'solver': ['lbfgs', 'sag', 'newton-cg', 'saga']}  
+]
+
+grid1=GridSearchCV(estimator=lr,
+                   param_grid=param_grid,
+                   refit=selector_mean,
+                   cv=5, 
+                   return_train_score=True,
+                   n_jobs=-1)</pre>
