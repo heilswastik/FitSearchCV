@@ -27,7 +27,8 @@ It provides a single function:
 
 Vanilla `GridSearchCV` usually selects the highest mean test score, which can sometimes favor models with high variance.  
 `selector_mean` instead minimizes: `0.5 * (|train - test|) + 0.5 * (1 - test)`  
-This prevents both underfittnig and overfitting.
+This prevents both underfittnig and overfitting. 
+
 `|train-test|` is for reducing the gap between train and test accuracy thus decreasing **overfitting**. 
 
 `(1-test)` is for reducing the gap between test accuracy and 1 hence increasing the score thus reducing **underfitting**.
