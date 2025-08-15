@@ -5,7 +5,7 @@ def selector_mean(results, metric=None, use_abs_gap=True, clip01=True):
         train_key = "mean_train_score"
         test_key  = "mean_test_score"
     else:
-        train_key = f"mAean_train_{metric}"
+        train_key = f"mean_train_{metric}"
         test_key  = f"mean_test_{metric}"
 
     if train_key not in results or test_key not in results:

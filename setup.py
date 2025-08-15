@@ -6,18 +6,17 @@ long_description = (this_dir / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="fitsearchcv",
-    version="1.0.0",
+    version="1.0.1",
     author="Swastik Verma",
     author_email="swastik.yash29052005@gmail.com",
-    description="An extension to sklearn.GridSearchCV and RandomizedSearchCV to reduce over and underfitting",
+    description="A smarter refit to sklearn.GridSearchCV and sklearn.RandomizedSearchCV to reduce over and underfitting",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/fitsearchcv",
+    url="https://github.com/heilswastik/FitSearchCV",
     packages=find_packages(),
     install_requires=[
         "numpy",
-        "scikit-learn",
-        "joblib"
+        "scikit-learn"
     ],
     python_requires=">=3.7",
     license="MIT",
