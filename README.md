@@ -13,13 +13,21 @@ It provides a single function:
 
 ## Best Use cases
 
--Accuracy, Balanced Accuracy
+-accuracy_score
 
--Precision, Recall, F1, Jaccard similarity
+-balanced_accuracy_score
 
--ROC AUC, PR AUC
+-precision_score (binary, micro, macro, weighted)
 
--Matthews correlation coefficient (MCC, normalized variant)
+-recall_score (binary, micro, macro, weighted)
+
+-f1_score (binary, micro, macro, weighted)
+
+-roc_auc_score
+
+-average_precision_score
+
+-jaccard_score
 
 ---
 
@@ -64,7 +72,7 @@ param_grid = [
 
 grid1=GridSearchCV(estimator=lr,
                    param_grid=param_grid,
-                   refit=selector_mean,
+                   refit=selector_mean, # added line
                    cv=5, 
                    return_train_score=True,
                    n_jobs=-1)</pre>
