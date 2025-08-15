@@ -13,21 +13,21 @@ It provides a single function:
 
 ## Best Use cases
 
--accuracy_score
+- accuracy_score
 
--balanced_accuracy_score
+- balanced_accuracy_score
 
--precision_score (binary, micro, macro, weighted)
+- precision_score (binary, micro, macro, weighted)
 
--recall_score (binary, micro, macro, weighted)
+- recall_score (binary, micro, macro, weighted)
 
--f1_score (binary, micro, macro, weighted)
+- f1_score (binary, micro, macro, weighted)
 
--roc_auc_score
+- roc_auc_score
 
--average_precision_score
+- average_precision_score
 
--jaccard_score
+- jaccard_score
 
 ---
 
